@@ -1,0 +1,71 @@
+html {
+    font-family: 'Roboto'; /* or Roboto */
+}
+
+head {
+
+}
+
+body {
+
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    height: 40px;
+    /*float: left;*/
+}
+
+h2 {
+    text-align: center;
+    color: #2d2d2d;
+}
+
+hr {
+    color: #a29bfe;
+    width: 75%;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:  #2d2d2d;
+    text-align: center;
+}
+
+.button:hover{
+    border-bottom: 0.1rem solid;
+    border-color: #a29bfe;
+}
+
+.contact {
+    margin: auto;
+    width: 40%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5rem;
+}
+
+.t_color {
+    /* for text color */
+    text-decoration-color: #2d2d2d;
+    color: #2d2d2d;
+}
+
+.flex {
+    display: flex;
+}
+
+.bg_color {
+    /* for backgrounf color */
+    background-color: #fefefa; /*baby powder*/
+}

@@ -1,0 +1,226 @@
+/*
+Main color: #ffffff (chalk whiteish color)
+Accent color: #00cec9
+Accent color2: #a29bfe or #6c5ce7 (a little darker version of the first) or #fab1a0 (more flat redish color)
+
+Main text color: black
+Text accent color: #00cec9
+
+border colors: #e17055
+
+#f2f3f4 < off white - anti glare hex code
+*/
+html {
+    font-family: 'Roboto'; /* or Roboto */
+}
+
+head {
+
+}
+
+body {
+    margin: auto;
+    width: 95%;
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    width: 96vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+    position: sticky;
+    top: 0;
+
+    background-color: #fefefa;
+
+    border-radius: 5px;
+}
+
+footer {
+    height: 25px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+hr {
+    width: 75%;
+}
+
+.opening-title { /* look into changing the color. maybe an accent color??*/
+    vertical-align: middle;
+    padding-top: 10%;
+    font-size: 52px;
+    color: #fefefa;
+}
+
+.t_color {
+    /* for text color */
+    text-decoration-color: #2d2d2d;
+    color: #2d2d2d;
+}
+
+.bg_color {
+    /* for backgrounf color */
+    background-color: #fefefa; /*baby powder*/
+}
+
+.email {
+    float: left;
+    padding-left: 35%;
+}
+
+.phone {
+    float: right;
+    padding-right: 38%;
+}
+
+.split-view {
+
+}
+
+.left-side {
+    width: 50%;
+    float: left;
+}
+
+.right-side {
+    width: 50%;
+    float: right;
+}
+
+.section {
+}
+
+.education {
+    text-align: center;
+}
+
+.skills {
+    list-style-type: square;
+    text-align: center;
+}
+
+.job {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:  #2d2d2d;
+    text-align: center;
+}
+
+.button:hover{
+    border-bottom: 0.1rem solid;
+    border-color: #a29bfe; /*#2d2d2d;*/
+}
+
+.card-section {
+    display: flex;
+
+
+}
+
+.card {
+    width: 25%;
+    height: 450px;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.inner-card {
+    height: 17%;
+    margin-top: 95%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
+}
+
+#cb1 {
+    background-color: #64c7e8;
+}
+
+#cb2 {
+    background-color: #bb8fce;
+}
+
+#cb3 {
+    background-color: #900C3F;
+}
+
+/*
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+.timer {
+    float: right;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    color: #2d2d2d;
+}
+
+/* all images and background colors are temporary at this stage */
+
+.parallax {
+    min-height: 500px;
+    width: 100%;
+
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #a29bfe;
+
+
+
+    /*box-shadow: 3px 2px 2px black;*/
+
+    /* Creates the parallax scrolling effect
+    thanks to a W3 tutorial > https://www.w3schools.com/howto/howto_css_parallax.asp*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*static elements */
+.static {
+    background-color: #fafafa;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.first, .second, .third {
+
+}
+
+.bg1 {
+    background-image: url('images/one.jpg');
+}
+
+.bg2 {
+    background-image: url('images/two.jpg');
+}
