@@ -1,0 +1,18 @@
+
+
+.area {
+    background: url("source.gif");
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.square {
+    float: left;
+    position: absolute;
+}
+
+.complete {
+    color: green;
+    font-size: 24px;
+}
