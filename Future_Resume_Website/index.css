@@ -67,6 +67,11 @@ hr {
     color: #2d2d2d;
 }
 
+.r_border {
+    border: 3px solid #f55668; /* redish-pink >#f55668  more red > #f14e4e*/
+    border-radius: 0.4rem;
+}
+
 .bg_color {
     /* for backgrounf color */
     background-color: #fefefa; /*baby powder*/
@@ -130,17 +135,49 @@ hr {
 
 .card-section {
     display: flex;
-
-
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0.5rem;
 }
+
+.project-section {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.projects {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .card {
     width: 25%;
     height: 450px;
-    margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 15px;
+    margin-left: 1rem;
+}
+
+.btn {
+    display:inline-block;
+    background-color:#f14e4e;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 2rem;
+    padding-top: .9rem;
+    padding-right: 2rem;
+    padding-bottom: .9rem;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .inner-card {
@@ -156,19 +193,6 @@ hr {
 .card:hover {
   box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
 }
-
-#cb1 {
-    background-color: #64c7e8;
-}
-
-#cb2 {
-    background-color: #bb8fce;
-}
-
-#cb3 {
-    background-color: #900C3F;
-}
-
 /*
 .vertical-align {
     display: flex;
@@ -213,14 +237,14 @@ hr {
     border-radius: 5px;
 }
 
-.first, .second, .third {
-
-}
-
 .bg1 {
     background-image: url('images/one.jpg');
 }
 
 .bg2 {
     background-image: url('images/two.jpg');
+}
+
+.pointer {
+    cursor: pointer;
 }

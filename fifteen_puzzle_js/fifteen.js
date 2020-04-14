@@ -6,6 +6,13 @@ var id_grid = [
     [13,14,15,-1] //-1 to indicate the empty block
 ];
 
+var completed = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12],
+    [13,14,15,-1] //-1 to indicate the empty block
+];
+
 var current_grid =  [
     [1,2,3,4],
     [5,6,7,8],
@@ -64,6 +71,8 @@ function init() {
         leaver(this);
     });
 
+    console.log(_copy(id_grid));
+
 }
 
 function image_Splitter() {
@@ -91,13 +100,15 @@ function image_Splitter() {
             //also divids background image into each square
             else
             {
-                var cell = $("<div class='square'></div>").attr("id", id_grid[i][j])
+                var cell = $("<div class='square'><p class='numbers'></p></div>").attr("id", id_grid[i][j])
                        .width(colWidth).height(rowHeight).appendTo(canvas)
                        .css('background', background)
                        .css('background-position', -(j * colWidth) + 'px ' + -(i * rowHeight) + 'px')
                        .css('left', (j * colWidth) +'px')
                        .css('top', (i * rowHeight) + 'px');
             }
+            //add numbers to each cell
+            $("#" + id_grid[i][j]).children('p').text(id_grid[i][j]);
         }
     }
 }
@@ -146,7 +157,7 @@ function do_The_Shuffle()
 //constructs a 2d array from a given 1d array
 function from_1d_array_to_2d_array(array)
 {
-    let new_array = id_grid; //make a copy of id_grid
+    let new_array = _copy(id_grid); //make a copy of id_grid
 
     let col = Math.sqrt(array.length);
     let row = array.length / col;
@@ -197,7 +208,7 @@ function valid_shuffle()
     let array = pos_array;
     let free_square = -1;
     let tmp = 0;
-    let end = Math.floor(Math.random() * (end_max - end_min) + end_min); // this variable is to allow the while loop to run for a random amountof time between 20 - 60 to get better shuffles 
+    let end = Math.floor(Math.random() * (end_max - end_min) + end_min); // this variable is to allow the while loop to run for a random amountof time between 20 - 60 to get a wider variety of shuffles
     //console.log(end);
 
     while(i <= end ) {
@@ -307,7 +318,6 @@ function MOVE(obj)
         console.log(grid_checker());
 
         if(grid_checker()) {
-            //outline id puzzlearea in green
             let parent = document.getElementById('controls')
             let p = document.createElement('p');
             p.appendChild(document.createTextNode("Puzzle Complete!"));
@@ -350,21 +360,25 @@ function move_validator(obj)
     if(r + 1 != 4) {
         if(current_grid[r+1][c] == -1) {
             $(id).css('cursor', 'pointer');
+            $(id).children('p').css('color', 'red');
         }
     }
     if(r - 1 != -1) {
         if(current_grid[r-1][c] == -1) {
             $(id).css('cursor', 'pointer');
+            $(id).children('p').css('color', 'red');
         }
     }
     if(c + 1 != 4) {
         if(current_grid[r][c+1] == -1) {
             $(id).css('cursor', 'pointer');
+            $(id).children('p').css('color', 'red');
         }
     }
     if(c - 1 != -1) {
         if(current_grid[r][c-1] == -1) {
             $(id).css('cursor', 'pointer');
+            $(id).children('p').css('color', 'red');
         }
     }
 }
@@ -377,7 +391,7 @@ function grid_checker()
         for(let j=0; j<col; j++)
         {
             //console.log(current_grid[i][j]);
-            //console.log(id_grid[i][j]);
+            //console.log(completed[i][j]);
             if(current_grid[i][j] != id_grid[i][j]) {
                 return false;
             }
@@ -386,11 +400,27 @@ function grid_checker()
     return true;
 }
 
+//function to set the cursor style back to default on mouse leave
 function leaver(obj) {
     let hovered_Square = obj.id;
     let id = '#' + hovered_Square;
 
     $(id).css('cursor', 'default');
+    $(id).children('p').css('color', 'black');
+}
+
+//returns a copy of the parameter
+function _copy(array) {
+
+    let r = array.length;
+
+    let array_copy = [];
+
+    for(let i = 0; i < row; i++) {
+        array_copy.push(array[i]);
+    }
+
+    return array_copy;
 }
 
 window.onload = init;
