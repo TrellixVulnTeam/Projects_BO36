@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
+        <!-- <?php header("Access-Control-Allow-Origin: *"); ?> -->
         <link rel='stylesheet' type='text/css' href='index.css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <script src="libraries/anime.min.js"></script>
@@ -16,7 +17,7 @@
             <div id='clock' class='timer'> </div>
         </header>
         <main>
-            <section class='parallax bg1 first-image t_color'>
+            <section class='parallax r_border bg1 first-image t_color'>
                 <h1 class='opening-title'> Name // Profession </h1>
                 <!-- first section should be about you, who you are, strong words
             about how you feel about youself -->
@@ -32,7 +33,7 @@
                     <p class='education'> place holder </p>
                 </section>
             </section>
-            <section class='parallax bg2 t_color'>
+            <section class='parallax r_border bg2 t_color'>
                 <h1> Hobbies Section 2 </h1>
             </section>
             <section class='static second t_color'>
@@ -52,29 +53,42 @@
                     <p class='job'> place holder </p>
                 </section>
             </section>
-            <section class='parallax card-section bg_color' id="bg3">
+            <section class='parallax r_border card-section bg_color' id="bg3">
                 <section class='card bg_color' id='cb1'>
-                        <section class='inner-card' id='ic_1'>
-                            <h3> Github Profile </h3>
-                        </section>
+                    <section class='inner-card' id='ic_1'>
+                        <h3> Github Profile </h3>
                     </section>
-                    <section class='project-section'>
-                        <h2> Github Projects! </h2>
+                </section>
+                <section class='project-section'>
+                    <h2> Github Projects! </h2>
+                    <section class='project_card_container'>
                         <section class='projects r_border' id='p1'>
-                            <p> </p>
-                            <a href='#' class="btn">Folder</a>
+                            <div class='title_icon_container'>
+                                <p class='overflow'> </p> <i class='icon'> </i>
+                            </div>
+                            <hr class='projects_hr'>
+                            <div class='btn_container'><a href='#' class="btn">Folder</a></div>
                         </section>
                         <section class='projects r_border' id='p2'>
-                            <p> </p>
-                            <a href='#' class="btn">Folder</a>
+                            <div class='title_icon_container'>
+                                <p class='overflow'> </p> <i class='icon'> </i>
+                            </div>
+                            <hr class='projects_hr'>
+                            <div class='btn_container'><a href='#' class="btn">Folder</a></div>
                         </section>
                         <section class='projects r_border' id='p3'>
-                            <p> </p>
-                            <a href='#' class="btn">Folder</a>
+                            <div class='title_icon_container'>
+                                <p class='overflow'> </p> <i class='icon'> </i>
+                            </div>
+                            <hr class='projects_hr'>
+                            <div class='btn_container'><a href='#' class="btn">Folder</a></div>
                         </section>
                         <section class='projects r_border' id='p4'>
-                            <p> </p>
-                            <a href='#' class="btn">Folder</a>
+                            <div class='title_icon_container'>
+                                <p class='overflow'> </p> <i class='icon'> </i>
+                            </div>
+                            <hr class='projects_hr'>
+                            <div class='btn_container'><a href='#' class="btn">Folder</a></div>
                         </section>
                     </section>
                 </section>

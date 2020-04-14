@@ -150,10 +150,17 @@ hr {
 }
 
 .projects {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
 }
 
 
@@ -164,6 +171,10 @@ hr {
     transition: 0.3s;
     border-radius: 15px;
     margin-left: 1rem;
+}
+
+.projects_hr {
+    color: #f14e4e;
 }
 
 .btn {
@@ -180,14 +191,26 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
 .inner-card {
     height: 17%;
     margin-top: 95%;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     background-color: white;
-    border-radius: 13px;
+    border-radius: .5rem;
 }
 
 .card:hover {
@@ -211,12 +234,8 @@ hr {
 /* all images and background colors are temporary at this stage */
 
 .parallax {
-    min-height: 500px;
+    min-height: 512px;
     width: 100%;
-
-    border-radius: 6px;
-    border-style: solid;
-    border-color: #a29bfe;
 
 
 
@@ -247,4 +266,41 @@ hr {
 
 .pointer {
     cursor: pointer;
+}
+
+.project_card_container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row || wrap;
+    width: 1100px;
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+    float: right;
+}
+
+.title_icon_container {
+    display: flex;
+}
+
+.c_icon {
+    background-image: url('images/icon/c-programming_42x42.png');
+}
+
+.py_icon {
+    background-image: url('images/icon/python_42x42.png');
+}
+
+.js_icon {
+    background-image: url('images/icon/javascript_42x42.png');
+}
+
+.java_icon {
+    background-image: url('images/icon/java_42x42.png');
+}
+
+.html_icon {
+    background-image: url('images/icon/html_42x42.png');
 }

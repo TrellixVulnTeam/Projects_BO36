@@ -2,6 +2,10 @@
 //const URL = 'https://api.github.com/repos/kennedy15/Projects';
 const URL = 'https://api.github.com/users/kennedy15/repos';
 
+//array for storing which projects are being displayed
+project_array = [];
+
+
 function init() {
     //returns an array of repos
     callAjax();
@@ -33,12 +37,68 @@ async function callAjax() {
     const repo_response = await fetch(new_url);
     const repo_result = await repo_response.json();
 
-    console.log(repo_result);
     for(let i = 0; i < ids.length; i++) {
-        $(ids[i]).find('p').text(repo_result[i+2].name); // 'i+2' isnt the best way to ignore the readme and .gitignore files but it works for now
+        //randomly select a project to display so each time the page is refreshed the user can see new projects!
+        let project = random_integer(repo_result.length);
+
+        $(ids[i]).find('p').text(repo_result[project].name); // 'i+2' isnt the best way to ignore the readme and .gitignore files but it works for now
+
+        if(repo_result[project].name == 'Future_Resume_Website') {
+            $(ids[i]).find('i').addClass('html_icon');
+            //hard coded this icon in because its the only website in my lists of projects
+        }
 
         //dynamically setting the links
-        $(ids[i]).find('a').attr('href', repo_result[i+2].html_url);
+        $(ids[i]).find('a').attr('href', repo_result[project].html_url);
+
+        let tmp_url = repo_result[project].git_url;
+        const project_response = await fetch(tmp_url);
+        const project_result = await project_response.json();
+
+        console.log(project_result);
+
+        let file_name = project_result.tree;
+        let tree_length = file_name.length;
+
+        let ext_array = [];
+
+        //dynamically adds an icon of the main language used in each project
+        for(let j = 0; j < tree_length; j++) {
+            ext_array.push(file_extenstion_reader(file_name[j].path));
+
+        }
+
+        if(ext_array.includes('c')) {
+            $(ids[i]).find('i').addClass('c_icon');
+        }
+        else if(ext_array.includes('java')) {
+            $(ids[i]).find('i').addClass('java_icon');
+        }
+        else if(ext_array.includes('js')) {
+            $(ids[i]).find('i').addClass('js_icon');
+        }
+        else if(ext_array.includes('py')) {
+            $(ids[i]).find('i').addClass('py_icon');
+        }
+        else{
+            //do nothing
+        }
+
+    }
+}
+
+function file_extenstion_reader(file_name) {
+    let file = file_name;
+    let file_length = file.length;
+
+    let extension = '';
+
+    for(let i = 0; i < file_length; i++) {
+        if(file[i] == '.') {
+            extension = file.slice(i+1, file_length);
+
+            return extension;
+        }
     }
 }
 
@@ -57,6 +117,18 @@ function change_page() {
 
 function profile_hover() {
     document.getElementById("cb1").classList.add('pointer');
+}
+
+function random_integer(max) {
+    let int = Math.floor(Math.random() * (max - 2) + 2);
+
+    if(int != 6 && project_array.includes(int) == false) {
+        project_array.push(int);
+        return int;
+    }
+    else {
+        return random_integer(max);
+    }
 }
 
 //removes the brackets at the end of urls
