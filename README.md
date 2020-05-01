@@ -5,6 +5,8 @@ This is repository meant to showcase my projects! This read will give a short de
 # Senior_Capstone_1
 A web service that allows the user to upload a chest x-ray image to a nueral network model trained on 89,696 x-ray images (tested on 22,424) and recieve back a list of likely diagnosises. 
 
+Built on a team with [Justice Suh](https://github.com/justicesuh) and [Drew Meseck](https://github.com/Drew-Meseck).
+
 ## Libraries Used:
 
 * [dJango](https://www.djangoproject.com/) - For the front-end.
