@@ -1,5 +1,25 @@
-# Senior_Capstone_1
+# Chest-Xray-Diagnostic-Neural-Network
 
-Currently ongoing.
+### Download dataset
 
-Developing, in a team of 3, a neural network to assist in in identifying various lung abnormalities from x-ray images 
+```bash
+python download.py
+```
+
+### Process labels
+
+```bash
+python process.py
+```
+
+### Train model
+
+```bash
+python train.py
+```
+
+### Test model
+
+```bash
+python test.py 42
+```
