@@ -15,9 +15,9 @@ Built on a team with [Justice Suh](https://github.com/justicesuh).
 * [jQuery](https://jquery.com/) - Useful javascript library.
 
 ### Section 1
-![World map](/images/world.png)
+![World map](images/world.png)
 ### Section 2
-![Multi-line graph](/images/line-graph.png)
+![Multi-line graph](images/line-graph.png)
 
 # 15 Square Puzzle
 
