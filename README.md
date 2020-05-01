@@ -45,3 +45,7 @@ A purely javascript powered 15 square puzzel game.
 ### Screenshot -
 ![15 square Puzzel](Completed_Projects/images/fifteen.png)
 
+# Image_creation
+
+this project is written in Python and was meant to use a mutation algorithm to generate abstract background images. What it ended up generating was an image that depicted static on tv. 
+
