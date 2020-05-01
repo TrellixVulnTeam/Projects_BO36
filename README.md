@@ -15,10 +15,10 @@ Built on a team with [Justice Suh](https://github.com/justicesuh).
 * [jQuery](https://jquery.com/) - Useful javascript library.
 
 ### Section 1
-![World map](world.png)
+![World map](https://github.com/kennedy15/Projects/blob/master/images/world.png)
 
 ### Section 2
-![Multi-line graph](line-graph.png)
+![Multi-line graph](https://github.com/kennedy15/Projects/blob/master/images/line-graph.png)
 
 # Resume Website
 
@@ -43,7 +43,7 @@ Assignment written entirely in java that not only takes a 9 x 9 sudoku grid and 
 A purely javascript powered 15 square puzzel game.
 
 ### Screenshot -
-![15 square Puzzel](Completed_Projects/images/fifteen.png)
+![15 square Puzzel](https://github.com/kennedy15/Projects/blob/master/images/fifteen.png)
 
 # Image_creation
 
