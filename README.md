@@ -15,14 +15,33 @@ Built on a team with [Justice Suh](https://github.com/justicesuh).
 * [jQuery](https://jquery.com/) - Useful javascript library.
 
 ### Section 1
-![World map](images/world.png)
+![World map](world.png)
+
 ### Section 2
-![Multi-line graph](images/line-graph.png)
+![Multi-line graph](line-graph.png)
+
+# Resume Website
+
+A webiste built throughout the spring semester of my junior year to showcase my experience with HTML / CSS / JS. You may have come to this repository from that website.
+
+## Libraries Used:
+* [jQuery](https://jquery.com/) - Useful javascript library.
+
+## Github Webiste Link:
+[Resume Website](#) <need to add this in
+
+# Sudoku_Subgrid_Validator_C
+
+Assignment written entirely in C that takes a 9 x 9 sudoku grid and implements 9 threads to test a smaller 3 x 3 area authenticty (if the sum of the smaller grid equals 45). 
+
+# Complete_Sudoku_Validator_Java
+
+Assignment written entirely in java that not only takes a 9 x 9 sudoku grid and implements 9 threads to test a smaller 3 x 3 area authenticty (if the sum of the smaller grid equals 45) but also tests each row and column.
 
 # 15 Square Puzzle
 
 A purely javascript powered 15 square puzzel game.
 
 ### Screenshot -
-![15 square Puzzel](/images/fifteen.png)
+![15 square Puzzel](Completed_Projects/images/fifteen.png)
 
