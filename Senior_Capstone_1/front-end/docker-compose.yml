@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: webui_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=webui
+    ports:
+      - 5432:5432
+    volumes:
+      - /var/lib/postgresql/data
+  web:
+    build: .
+    command: gunicorn webui.wsgi:application --bind 0.0.0.0:8888
+    container_name: webui_web
+    volumes:
+      - .:/app
+      - ./static:/opt/static
+      - ./media:/opt/media
+    env_file:
+      - .env.dev
+    expose:
+      - 8888
+    depends_on:
+      - db
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./static:/opt/static
+      - ./media:/opt/media
+    ports:
+      - 80:80
+    depends_on:
+      - web

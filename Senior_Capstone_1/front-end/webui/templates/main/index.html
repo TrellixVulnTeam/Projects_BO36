@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title> Capstone Project </title>
+        {% load static %}
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'js/anime.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <section class='header width80'>
+            <h1> Utilizing Neural Networks to Aid in Diagnostics of Lung Abnormalities via X-Ray Image Data </h1>
+            <hr>
+        </section>
+        <div class='body-container'>
+            <div class='scroll'>
+                <section class='container width80'>
+                    <section class='input-container'>
+                        <section class='input-img r_border'>
+                            {% if url %}
+                            <img id="img" src="{{ url }}" width="512" height="512">
+                            {% endif %}
+                        </section>
+                        <section class='center width80'>
+                        <form id="upload-form" method="POST" action='' enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <label class='custom-label-btn'>
+                                    <input type='file' name="upload" id='submit-btn'>
+                                    <i> Upload Image </i>
+                            </label>
+                        </form>
+                        </section>
+                    </section>
+                    <section class='output r_border'>
+                        <ul id='diagnosis'>
+                        {% for diagnosis in diagnoses %}
+                            <li>{{ diagnosis.0 }}: {{ diagnosis.1 }}</li>
+                        {% endfor %}
+                        </ul>
+                    </section>
+                </section>
+            </div>
+            <div class='scroll'>
+                <section class='grey'>
+                    <section class='description'>
+                        <section id='box' class='creator_container'>
+                            <div id='one' class='creator r_border'></div>
+                            <div id='two' class='creator r_border'></div>
+                            <div id='three' class='creator r_border'></div>
+                        </section>
+                        <section class='button_container'>
+                            <a href='https://github.com/kennedy15' class="btn">Github</a>
+                            <a href='https://github.com/justicesuh' class="btn">Github</a>
+                            <a href='https://github.com/Drew-Meseck' class="btn">Github</a>
+                        </section>
+                    </section>
+                    <section class='project_repo'>
+                        <a href='https://github.com/CS-Capstone-AU-Chest-Xray-NN' class='repo_btn' > Project Repo </a>
+                    </section>
+                    <section class='footer width80'>
+                        <hr class='width80'>
+                        <section class='bottom width80'>
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

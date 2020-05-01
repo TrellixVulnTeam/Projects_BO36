@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title> Capstone Project </title>
+        {% load static %}
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'js/anime.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <section class='header width80'>
+            <h1>Login</h1>
+        </section>
+        <div class='body-container'>
+            <div class='scroll'>
+                <section class='container width80'>
+                    <section>
+                        <form id="login-form" method="POST" action="/login">
+                            {% csrf_token %}
+                            <input type="text" name="username" id="username" placeholder="username">
+                            <input type="password" name="password" id="password" placeholder="password">
+                            <input type="submit" id="login-submit" value="Login">
+                        </form>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
