@@ -1,6 +1,18 @@
 # Projects
 
-This is repository meant to showcase my projects! This read will give a short description of each project and what it does. 
+This is repository meant to showcase my projects! This read will give a short description of each project and what it does.
+
+# Senior_Capstone_1
+A web service that allows the user to upload a chest x-ray image to a nueral network model trained on 89,696 x-ray images (tested on 22,424) and recieve back a list of likely diagnosises. 
+
+## Libraries Used:
+
+* [dJango](https://www.djangoproject.com/) - For the front-end.
+* [Tensorflow](https://www.tensorflow.org/) - Built the neural network.
+* [Docker](https://www.docker.com/) - The container that holds everything together.
+
+### Screenshot -
+![Capstone Website](https://github.com/kennedy15/Projects/blob/master/images/capstone.png)
 
 # Covid_19 Data Website
 
